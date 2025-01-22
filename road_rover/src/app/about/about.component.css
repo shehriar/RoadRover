@@ -1,0 +1,21 @@
+h1{
+    font-weight: bold;
+}
+
+p{
+    color: rgb(86, 86, 86);
+}
+
+h3{
+    font-weight: bold;
+}
+
+.padding{
+
+    padding-bottom: 20px;
+}
+
+div{
+    margin-left: 5%;
+    margin-right: 5%;
+}

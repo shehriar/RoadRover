@@ -1,0 +1,25 @@
+<div class = "home-car" #homeComponent>
+    <div class = "home-promo-text">
+        <h3>Plan your trip now!</h3>
+        <h1>Save <span style = "color: rgb(51, 138, 51)">Big</span> with our car rental</h1>
+        <p>Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more!</p>
+        <div class = "left-row">
+            <button class = "book-button" (click)="onBookARideClick()">Book a Ride!</button>
+            <div style = "padding-right: 7%;"></div>
+            <button class = "learn-more-button" (click) = "onAboutClick()">Learn More</button>
+        </div>
+    </div>
+    <img src="assets/home_image.png">
+</div>
+<app-car-search></app-car-search>
+<div style = "padding-bottom: 10%;"></div>
+<app-ratings></app-ratings>
+<div style = "padding-bottom: 10%;"></div>
+<!-- <app-car-list></app-car-list> -->
+<!-- <div style = "padding-bottom: 10%;"></div> -->
+<app-about></app-about>
+<div style = "padding-bottom: 10%;"></div>
+<app-our-team></app-our-team>
+<div style = "padding-bottom: 5%;"></div>
+<app-contact></app-contact>
+<div style = "padding-bottom: 5%;"></div>

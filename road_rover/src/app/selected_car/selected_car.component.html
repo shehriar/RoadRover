@@ -1,0 +1,40 @@
+<div #selectedCarComponent>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class = "row">
+        <div class = "background-image" style = "background-image: url('assets/skyline.png');">
+            <img style = "margin-top: 30%;" src = "assets/all_cars/{{selectedCar.vehiclemodel}}.png">
+        </div>
+        <div class = "column" style = "margin-top: 8%; margin-left: 5%;">
+            <h1>{{selectedCar.vehiclemake}}</h1>
+            <h1>{{selectedCar.vehiclemodel}} ({{selectedCar.vehicleyear}})</h1>
+            <div style = "margin-top: 5%;"></div>
+            <h2 style = "color: green; font-size: 40px;">${{selectedCar.ratedaily}} <span style = "color: black; font-weight: bold; font-size: 20px;">/day</span></h2>
+            <div class = "row">
+                <h2>{{selectedCar.vehicletype}}</h2>
+                <div style = "margin-right: 10%;"></div>
+                <div style = "height: 30px; width: 1px; background-color: black;"></div>
+                <div style = "margin-right: 10%;"></div>
+                <h2>{{selectedCar.fuelType}}</h2>
+                <div style = "margin-right: 5%;"></div>
+                <div *ngIf = "selectedCar.fuelType == 'Gasoline' || selectedCar.fuelType == 'Diesel'">
+                    <img src = "assets/gas-tank-icon.jpeg" height="30px">
+                </div>
+                <div *ngIf = "selectedCar.fuelType == 'Electric'">
+                    <img src = "assets/electric-icon.png" height="30px">
+                </div>
+            </div>
+            <div class = "row">
+                <span class="fa fa-star checked" style = "margin-top: 2.5%; color:rgb(209, 180, 11);"></span>
+                <h2 style = "color: rgb(209, 180, 11); margin-left: 3%;">{{selectedCar.rating}} ({{selectedCar.reviewCount}} {{reviewLabel}})</h2>
+            </div>
+            <h2>Pickup Location: {{selectedCar.locationcity}}, {{selectedCar.locationstate}}, {{selectedCar.locationcountry}}</h2>
+            <h2>Dates Booking : {{selectedDateRange.start}} - {{selectedDateRange.end}}</h2>
+            <div class = "row buttons">
+                <button class = "back-button" (click) = "clickButton('all_cars')">Back</button>
+                <div style = "padding-right: 7%;"></div>
+                <button class = "book-button" (click) = "clickButton('booking')">Book</button>
+            </div>
+        </div>
+    </div>
+</div>

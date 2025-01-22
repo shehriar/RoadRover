@@ -1,0 +1,91 @@
+.vl{
+    height: 90%;
+    border: 1px solid black;
+    width: 10px;
+}
+
+.row{
+    display: flex;
+}
+
+.car-list-grp {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center; /* Center items horizontally */
+    width: 95%;
+    margin-left: 2.5%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.car-list-grp img{
+    margin-top: 7%;
+    height: auto;
+    width: 225px;
+    margin-bottom: 10%;
+}
+
+.car-list-grp div{
+    width: 250px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20%;
+    margin-left: 10%;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.car-list-grp div:hover{
+    background-color: rgb(219, 219, 219);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.car-list-grp h3{
+    margin: 0;
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 10fr 1fr 60fr;
+}
+
+.left-column {
+    margin-top: 30%;
+    overflow: auto;
+    height: 70vh;
+    background-color: rgb(255, 255, 255);
+    /* background-color: grey; */
+    /* border-radius: 20px; */
+    margin-left: 10%;
+    /* border: 1px solid rgb(113, 113, 113); */
+    text-align: center;
+    /* border-right: 1px solid black; */
+}
+
+.vl{
+    margin-left: 100%;
+    width: 1px;
+    height: 90%;
+    border-color: rgb(233, 233, 233);
+    background-color: rgb(233, 233, 233);
+    margin-top: 50%;
+}
+
+.right-column {
+    overflow: auto;
+    height: 80vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* background-color: grey; */
+    /* background-color: rgb(228, 228, 228); */
+    background-color: white;
+    /* border-top-right-radius: 20px; */
+    /* border-bottom-right-radius: 20px; */
+    /* border-left: 1px solid black; */
+}

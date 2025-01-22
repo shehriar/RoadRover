@@ -1,0 +1,33 @@
+<div #vehicleFiltersComponent>
+    <div class = "vehicle-filter">
+        <app-autocomplete-search label = "Pick Up" locationType="pickup"></app-autocomplete-search>
+    </div>
+    <div style = "margin-bottom: 40%;"></div>
+    <!-- <div *ngFor = "let type of vehicleTypes">
+        {{type.vehicletype}}
+    </div> -->
+    <form>
+        <select name = "Type" class = "dropdown" (change)="onVehicleTypeChange($event)">
+            <option style = "text-align: center;" value = "">--Vehicle Type--</option>
+            <option *ngFor = "let type of vehicleTypes" [value] = "type.vehicletype" style="text-align: center;">
+                {{type.vehicletype}}
+            </option>
+        </select>
+        <div style = "margin-bottom: 40%;"></div>
+        <p>Vehicle Make</p>
+        <div class = "make">
+            <div *ngFor="let make of vehicleMakes">
+                <input type="checkbox" [id]="make.vehiclemake" [value]="make.vehiclemake" class = "checkbox"
+            (change)="onVehicleMakesChange($event, make.vehiclemake)">
+                <label [for]="make.vehiclemake">{{make.vehiclemake}}</label>
+            </div>
+        </div>
+        <div style = "margin-bottom: 40%;"></div>
+        <select name = "Fuel Type" class = "dropdown" (change)="onFuelTypeChange($event)">
+            <option style = "text-align: center;" value = "">--Fuel Type--</option>
+            <option *ngFor = "let vehicle of fuelTypes" [value] = "vehicle.fueltype" style="text-align: center;">
+                {{vehicle.fueltype}}
+            </option>
+        </select>
+    </form>
+</div>

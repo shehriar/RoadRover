@@ -1,0 +1,97 @@
+<div #bookingComponent class = "container">
+    <div class = "left-column" style="width: 90%;">
+        <div style = "margin-top: 10%"></div>
+        <img src = "assets/all_cars/{{selectedCar.vehiclemodel}}.png" width="70%" height = "auto" style = "margin-left: 15%;">
+        <div style = "margin-top: 10%"></div>
+        <table style="width:80%; margin-left: 10%; background-color: white; border-radius: 10px;" border=1>
+            <tr>
+                <th>Vehicle Make</th>
+                <td>{{selectedCar.vehiclemake}}</td>
+            </tr>
+            <tr>
+                <th>Vehicle Model</th>
+                <td>{{selectedCar.vehiclemodel}}</td>
+            </tr>
+            <tr>
+                <th>Year</th>
+                <td>{{selectedCar.vehicleyear}}</td>
+            </tr>
+            <tr>
+                <th>Vehicle Type</th>
+                <td>{{selectedCar.vehicletype}}</td>
+            </tr>
+            <tr>
+                <th>Fuel Type</th>
+                <td>{{selectedCar.fuelType}}</td>
+            </tr>
+            <tr>
+                <th>Pickup Location</th>
+                <td>{{selectedCar.locationcity}}, {{selectedCar.locationstate}}, {{selectedCar.locationcountry}}</td>
+            </tr>
+            <tr>
+                <th>Price / day</th>
+                <td>${{selectedCar.ratedaily}}</td>
+            </tr>
+            <tr>
+                <th>Reserving dates</th>
+                <td>{{selectedDateRange.start}} - {{selectedDateRange.end}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class = "middle-column">
+        <div style = "margin-left: 10%;">
+            <h2>User Details</h2>
+            <form style="margin-left: 5%;">
+                <label for="fname">Full name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="email">Email Address:</label><br>
+                <input type="text" id="email" name="email"><br>
+                <label for="phone">Phone:</label><br>
+                <input type="text" id="phone" name="phone"><br>
+                <label for="address">Address Line:</label><br>
+                <input type="text" id="address" name="address"><br>
+                <label for="city">City:</label>
+                <label style = "padding-left: 80px;"for="state">State:</label><br>
+                <input style="width: 90px;" type="text" id="city" name="city">
+                <input style="width: 90px; margin-left: 10px;" type="text" id="state" name="state"><br>
+                <label for="zip">ZIP Code:</label><br>
+                <input type="text" id="zip" name="zip"><br>
+                <label for="drnum">Driver License #:</label><br>
+                <input type="text" id="address" name="drnum"><br>
+            </form>
+            <div style = "margin-top: 5%;"></div>
+            <h2>Card Details</h2>
+            <form style="margin-left: 5%;">
+                <label for="cardname">Name on Card:</label><br>
+                <input type="text" id="cardname" name="cardname"><br>
+                <label for="cardnumber">Card Number:</label><br>
+                <input type="text" id="cardnumber" name="cardnumber"><br>
+                <label for="expdate">Exp Date:</label>
+                <label style="padding-left: 47px;" for="cvv">CVV:</label><br>
+                <input style = "width: 90px;" type="text" id="expdate" name="expdate">
+                <input style = "margin-left: 10px; width: 90px;"type="text" id="cvv" name="cvv"><br>
+            </form>
+        </div>
+
+    </div>
+
+    <div class = "right-column">
+        <div style="padding-top: 130%;"></div>
+        <div style = "margin-left: 20%;">
+            <div class = "row" style="margin-right: 5%;">
+                <h3 style="font-size: 20px;">${{bookingPrice}} </h3>
+                <div style="margin-bottom: 10px;">
+                    <h3 style="font-size: 16px">&nbsp;+ ${{taxPrice}} <span style="font-size: 12px;">Tax</span></h3>
+                </div>
+            </div>
+            <h2 style="font-weight: bolder;">Total = ${{totalPrice}}</h2>
+        </div>
+        <div style = "padding-top: 30%;"></div>
+        <div class = "row buttons flex" style = "margin-left: 5%; margin-top: 5%;">
+            <button class = "back-button" (click) = "clickButton('vehicle_select')">Back</button>
+            <div style = "padding-right: 7%;"></div>
+            <button class = "book-button" (click) = "clickButton('booking-confirmation')">Confirm</button>
+        </div>
+    </div>
+</div>

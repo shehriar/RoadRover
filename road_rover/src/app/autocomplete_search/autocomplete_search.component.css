@@ -1,0 +1,25 @@
+:host-context(.search-car) mat-form-field {
+    width: 400px;
+}
+
+:host-context(.vehicle-filter) mat-form-field {
+    width: 100% !important;
+}
+
+.location-form mat-label{
+    color: rgb(188, 188, 188);
+}
+
+.location-form mat-form-field{
+    background-color: white;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.mat-stepper-container-color{
+    background-color: white !important;
+}
+
+.location-form form{
+    background-color: white;
+}

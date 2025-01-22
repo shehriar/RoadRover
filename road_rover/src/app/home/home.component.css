@@ -1,0 +1,108 @@
+.home-car{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-top:3%;
+    margin-right: 3%;
+}
+
+.home-car img{
+    height:auto;
+    width: 800;
+}
+
+.home-promo-text{
+    margin-top: 10%;
+    margin-right: 8%;
+    width: 20%;
+    justify-content: center;
+}
+
+.home-promo-text p{
+    margin-top: 1%;
+    font-size: 13px;
+    color: rgb(79, 79, 79);
+}
+
+.home-promo-text h3{
+    margin-bottom: 0.5%;
+}
+
+.home-promo-text h1{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 40px;
+}
+
+.left-row{
+    display: flex;
+    justify-content: left;
+}
+
+.left-row button{
+    width: 120px;
+    height: 50px;
+    margin-top: 5%;
+    border-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.book-button{
+    background-color: rgb(75, 201, 75);
+}
+
+.learn-more-button{
+    background-color: rgb(37, 37, 37);
+    
+}
+
+/* .top-page-buttons { */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* position: fixed; */
+/* } */
+
+.top-page {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-page img{
+    margin-left: 5%;
+    height: 100px;
+    width: auto;
+    cursor: pointer;
+}
+
+.top-page-buttons {
+    position: fixed;
+    /* position:initial; */
+    /* position: absolute; */
+    /* position: sticky; */
+    top: 0;
+    left: 100%;
+    transform: translateX(-50%);
+    width: 100%; 
+    z-index: 1000;
+    background-color: transparent;
+    margin-left: 15%;
+}
+
+.top-page-buttons button {
+    background-color: transparent;
+    margin-right: 5%;
+    margin-top: 2%;
+    cursor: pointer;
+    border: white;
+    font-weight: bold;
+    font-family: "Lucida Console", monospace
+}
+
+.top-page-buttons button:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,42 @@
+/* .top-page-buttons { */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* position: fixed; */
+/* } */
+
+.top-page {
+    display: flex;
+    justify-content: left;
+}
+
+.top-page img{
+    margin-left: 5%;
+    height: 100px;
+    width: auto;
+    cursor: pointer;
+}
+
+.top-page-buttons {
+    position: fixed;
+    top: 0;
+    left: 100%; /* Center relative to the viewport */
+    transform: translateX(-50%); /* Shift it back to truly center it */
+    width: 100%; 
+    z-index: 1000;
+    background-color: transparent;
+}
+
+.top-page-buttons button {
+    background-color: transparent;
+    margin-right: 5%;
+    margin-top: 2%;
+    cursor: pointer;
+    border: white;
+    font-weight: bold;
+    font-family: "Lucida Console", monospace
+}
+
+.top-page-buttons button:hover {
+    text-decoration: underline;
+}

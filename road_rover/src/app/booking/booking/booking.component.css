@@ -1,0 +1,58 @@
+.container{
+    display: grid;
+    grid-template-columns: 4fr 2fr 1.5fr;
+}
+
+.left-column {
+    overflow: auto;
+    margin-left: 5%;
+    height: 80vh;
+    background-color: rgb(233, 233, 233);
+    margin-top: 5%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.middle-column {
+    overflow: auto;
+    height: 80vh;
+    background-color: rgb(255, 255, 255);
+    margin-top: 5%;
+}
+
+.right-column {
+    overflow: auto;
+    margin-right: 5%;
+    height: 80vh;
+    background-color: rgb(255, 255, 255);
+    margin-top: 5%;
+}
+
+input{
+    width: 200px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.buttons button{
+    width: 120px;
+    height: 50px;
+    border-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.book-button{
+    background-color: rgb(75, 201, 75);
+}
+
+.back-button{
+    background-color: rgb(37, 37, 37);
+}
+
+.row{
+    display:flex;
+}

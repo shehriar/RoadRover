@@ -1,0 +1,43 @@
+/* .car-list-grp{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    width: 95%;
+    margin-left: 2.5%;
+    background-color: rgb(232, 232, 232);
+    border-radius: 10px;
+} */
+
+.car-list-grp {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center; /* Center items horizontally */
+    width: 95%;
+    margin-left: 2.5%;
+    background-color: rgb(232, 232, 232);
+    border-radius: 10px;
+}
+
+.car-list-grp img{
+    margin-top: 7%;
+    height: auto;
+    width: 225px;
+}
+
+.car-list-grp div{
+    width: 225px;
+    height: 180px;
+    background-color: transparent;
+    margin-top: 15%;
+    /* margin-bottom: 5%; */
+    margin-left: 10%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.car-list-grp h3{
+    margin-top: 5%;
+    color: rgb(59, 59, 59);
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}

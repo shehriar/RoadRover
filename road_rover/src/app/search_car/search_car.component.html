@@ -1,0 +1,21 @@
+<div class = "car-search" #searchCarComponent>
+    <div class = "center-row search-car">
+        <app-autocomplete-search label = "Pick Up" locationType="pickup"></app-autocomplete-search>
+        <div style = "padding-right: 5%;"></div>
+        <div>
+            <div style="margin-bottom: 0;">
+                <app-date-picker></app-date-picker>
+            </div>
+            <div *ngIf="isDateError == true">
+                <p style="color: rgb(214, 0, 0); margin-top: 0;">Please input a valid date!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class = "left-row">
+        <div style = "padding-right: 5%;"></div>
+        <button (click)="clickButton('all_cars')">Search</button>
+    </div>
+</div>
+
+<!-- <p {{range}}></p> -->

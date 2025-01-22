@@ -1,0 +1,33 @@
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.make{
+    height: 100px;
+    overflow-y: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: start;
+}
+
+.dropdown{
+    height: 30px; 
+    border-radius: 20px;
+}
+
+.checkbox {
+    border: 2px solid blue;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+    border-radius: 20px;
+    margin-bottom: 5%;
+  }
+
+.checkbox:hover{
+    outline: 2px solid blue;
+    border-radius: 50%;
+}
