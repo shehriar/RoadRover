@@ -13,6 +13,10 @@ export class AppComponent {
   title = 'car-renting';
   constructor(private router: Router, private scrollService: ScrollService, private apiService: ApiService) {}
 
+  ngOnInit(){
+    this.apiService.getMessage().subscribe(data=>{console.log(data)});
+  }
+
   onHomeClick() {
     this.scrollService.scrollToHome();
   }

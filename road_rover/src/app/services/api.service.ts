@@ -9,10 +9,11 @@ import { environment } from '../environments/environment';
 }) 
 export class ApiService { 
     constructor(private http: HttpClient) { }
-    getMessage() { 
+    getMessage() {
         return this.http.get( 
             `${environment.apiBaseUrl}/api/message`); 
     } 
+    
     getLocations():Observable<any>{
         return this.http.get(
             `${environment.apiBaseUrl}/api/locations`

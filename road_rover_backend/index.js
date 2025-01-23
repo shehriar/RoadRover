@@ -1,13 +1,18 @@
 // import express from 'express'
 const database = require('./database.js');
-
 const express = require('express');
-const app = express();
-
 const bodyParser = require('body-parser');
+const serverless = require('serverless-http');
+const cors = require('cors');
 
+const app = express();
 app.use(bodyParser.json());
 
+app.use(cors({
+    origin: 'http://roadrover.s3-website-us-west-2.amazonaws.com/', 
+    methods: 'GET, POST, PUT, DELETE', 
+    allowedHeaders: ['Content-Type', 'Authorization'], 
+}));
 // handling CORS 
 // app.use((req, res, next) => { 
 //     res.header("Access-Control-Allow-Origin",  
@@ -17,13 +22,17 @@ app.use(bodyParser.json());
 //     next(); 
 // }); 
 
-app.use((req, res, next) => { 
-    res.header("Access-Control-Allow-Origin",  
-               "http://localhost:4200"); 
-    res.header("Access-Control-Allow-Headers",  
-               "Origin, X-Requested-With, Content-Type, Accept"); 
-    next(); 
-}); 
+// app.use((req, res, next) => { 
+//     res.header("Access-Control-Allow-Origin",  
+//                "http://localhost:4200"); 
+//     res.header("Access-Control-Allow-Headers",  
+//                "Origin, X-Requested-With, Content-Type, Accept"); 
+//     next(); 
+// }); 
+
+app.get('/message', (req, res) => {
+    res.send("Hello World!");
+})
 
 app.get('/api/locations', async (req, res) => { 
     try {
@@ -84,6 +93,8 @@ app.post('/api/vehicles_from_pickup_location', async (req, res) => {
     }
 });
   
-app.listen(3000, () => { 
-    console.log('Server listening on port 3000'); 
-});
+// app.listen(3000, () => { 
+//     console.log('Server listening on port 3000'); 
+// });
+
+module.exports.handler = serverless(app)

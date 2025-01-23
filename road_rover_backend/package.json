@@ -6,18 +6,20 @@
   },
   "description": "",
   "type": "commonjs",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^20.11.16",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.1",
     "express": "^4.18.2",
-    "mysql2": "^3.9.1"
+    "mysql2": "^3.9.1",
+    "serverless-http": "^3.2.0"
   }
 }
